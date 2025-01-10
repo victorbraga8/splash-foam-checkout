@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Cog6ToothIcon, CubeIcon } from "@heroicons/react/24/solid";
+import { Cog6ToothIcon, CubeIcon, FireIcon } from "@heroicons/react/24/solid";
 import { PriceDisplaySimple } from "@/app/_components/checkout/checkout-price-display";
 export default function QuantitySelectorV2({
   info,
@@ -20,7 +20,17 @@ export default function QuantitySelectorV2({
           <h6>How many hearing aids do you want ?</h6>
         </div>
       </div>
-
+      <div className="bg-red-200 py-2 mb-6 rounded-md">
+        <div className="flex flex-col pl-20 text-sm justify-between">
+          <span className="font-bold flex items-center gap-1">
+            <span className="text-red-600 flex items-center">
+              <FireIcon className="w-6 h-6 text-red-600" />
+              High Demand:
+            </span>
+            84 people are looking this offer!
+          </span>
+        </div>
+      </div>
       <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
         <div
           className="flex w-full justify-between items-center pb-6"
