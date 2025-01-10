@@ -13,11 +13,15 @@ export default function QuantitySelectorV2({
 }: any) {
   return (
     <>
-      <div className="flex w-full">
-        <Cog6ToothIcon className="h-[16px] w-[16px] mr-2" />
-        <h3 className="font-bold text-[16px]">Step 1: Select Quantity</h3>
+      <div className="flex justify-between py-6 items-center">
+        <Cog6ToothIcon className="h-20 w-20 mr-2" />
+        <div className="flex w-full flex-col  justify-start items-start">
+          <h3 className="font-bold text-3xl">Select Quantity</h3>
+          <h6>How many hearing aids do you want ?</h6>
+        </div>
       </div>
-      <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
+
+      <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
         <div
           className="flex w-full justify-between items-center pb-6"
           id="quantity-selector"
