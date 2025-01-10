@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Cog6ToothIcon } from "@heroicons/react/24/solid";
+import { Cog6ToothIcon, CubeIcon } from "@heroicons/react/24/solid";
 import { PriceDisplaySimple } from "@/app/_components/checkout/checkout-price-display";
 export default function QuantitySelectorV2({
   info,
@@ -14,7 +14,7 @@ export default function QuantitySelectorV2({
   return (
     <>
       <div className="flex justify-between py-6 items-center">
-        <Cog6ToothIcon className="h-20 w-20 mr-2" />
+        <CubeIcon className="h-20 w-20 mr-2" />
         <div className="flex w-full flex-col  justify-start items-start">
           <h3 className="font-bold text-3xl">Select Quantity</h3>
           <h6>How many hearing aids do you want ?</h6>
