@@ -462,9 +462,12 @@ const CheckoutForm = ({ info }: Props) => {
             <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4 lg:hidden">
               <MobilePaymentOptions firePaypal={firePaypal} loading={loading} />
             </div>
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
-              <CustomerInfo formik={formik} />
-            </div>
+            {info.template === "1" && (
+              <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
+                <CustomerInfo formik={formik} />
+              </div>
+            )}
+
             {info.template === "2" && (
               <div className="flex flex-col w-full  lg:py-8">
                 <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">

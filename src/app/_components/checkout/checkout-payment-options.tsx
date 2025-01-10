@@ -9,6 +9,7 @@ import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { ProductInfoType } from "@/interfaces/productInfo";
 import StateProvinceSelect from "./checkout-state-selector";
 import { PriceDisplaySimple } from "./checkout-price-display";
+import CustomerInfo from "./checkout-customer-info";
 
 type PaymentProps = {
   info: CheckoutPageType;
@@ -274,35 +275,29 @@ const PaymentOptions = ({
             </div>
           </>
         ) : (
-          <div className="hidden lg:flex w-full justify-start mt-2 mb-4">
-            {/* <input
-              type="radio"
-              checked={false}
-              className="mr-2 cursor-pointer  "
-              readOnly
-              onClick={() => {
-                if (loading === "") {
-                  firePaypal();
-                }
-              }}
-            />{" "} */}
-            <div
-              className="flex w-full justify-center border-[1px] border-[#ffc439] bg-[#ffc439] rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-[#ffde3a] hover:border-[#ffde3a]"
-              onClick={() => {
-                if (loading === "") {
-                  firePaypal();
-                }
-              }}
-            >
-              <Image
-                src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1397951e-7288-4b95-8ef1-b1f423b56c00/public"
-                width={278}
-                height={44}
-                alt="Paypal"
-                className="cursor-pointer hover:brightness-110 object-scale-down "
-              />
+          <>
+            <div className="hidden lg:flex w-full justify-start mt-2 mb-4">
+              <div
+                className="flex w-full justify-center border-[1px] border-[#ffc439] bg-[#ffc439] rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-[#ffde3a] hover:border-[#ffde3a]"
+                onClick={() => {
+                  if (loading === "") {
+                    firePaypal();
+                  }
+                }}
+              >
+                <Image
+                  src="https://imagedelivery.net/3TTaU3w9z1kOYYtN3czCnw/1397951e-7288-4b95-8ef1-b1f423b56c00/public"
+                  width={278}
+                  height={44}
+                  alt="Paypal"
+                  className="cursor-pointer hover:brightness-110 object-scale-down "
+                />
+              </div>
             </div>
-          </div>
+            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
+              <CustomerInfo formik={formik} />
+            </div>
+          </>
         )}
 
         <div className="hidden lg:block h-[1px] w-full bg-[#ddd] mt-2 mb-4" />
