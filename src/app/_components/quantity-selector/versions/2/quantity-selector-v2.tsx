@@ -1,13 +1,20 @@
-import Image from "next/image";
-import { Cog6ToothIcon, CubeIcon, FireIcon } from "@heroicons/react/24/solid";
-import { PriceDisplaySimple } from "@/app/_components/checkout/checkout-price-display";
+import { useState } from "react";
+
+import { CubeIcon, FireIcon } from "@heroicons/react/24/solid";
 import ProductList from "../../product-list";
+
 export default function QuantitySelectorV2({
   info,
   product,
   handleProductClick,
   country,
+  price1,
+  price2,
+  price3,
+  price4,
 }: any) {
+  const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
+
   const productList = {
     product1: {
       key: 0,
@@ -49,9 +56,9 @@ export default function QuantitySelectorV2({
     <>
       <div className="flex justify-between py-6 items-center">
         <CubeIcon className="h-20 w-20 mr-2" />
-        <div className="flex w-full flex-col  justify-start items-start">
+        <div className="flex w-full flex-col justify-start items-start">
           <h3 className="font-bold text-3xl">Select Quantity</h3>
-          <h6>How many hearing aids do you want ?</h6>
+          <h6>How many hearing aids do you want?</h6>
         </div>
       </div>
       <div className="bg-red-200 py-2 mb-6 rounded-md">
@@ -61,29 +68,29 @@ export default function QuantitySelectorV2({
               <FireIcon className="w-6 h-6 text-red-600" />
               High Demand:
             </span>
-            84 people are looking this offer!
+            84 people are looking at this offer!
           </span>
         </div>
       </div>
-      <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
-        <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd]">
-          {productKeys.map((key: any) => {
-            const product = productList[key];
-            return (
-              <ProductList
-                key={product.key}
-                info={product.inf}
-                product={product.product}
-                handleProductClick={productList.handleProductClick}
-                price={product.price}
-                ogPrice={product.ogPrice}
-                country={productList.country}
-                bestSeller={product.bestSeller}
-                itemKey={product.key}
-              />
-            );
-          })}
-        </div>
+      <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd]">
+        {productKeys.map((key: any) => {
+          const product = productList[key];
+          return (
+            <ProductList
+              key={key}
+              itemKey={product.key}
+              info={product.inf}
+              product={product.product}
+              handleProductClick={productList.handleProductClick}
+              price={product.price}
+              ogPrice={product.ogPrice}
+              country={productList.country}
+              bestSeller={product.bestSeller}
+              selectedProduct={selectedProduct}
+              setSelectedProduct={setSelectedProduct}
+            />
+          );
+        })}
       </div>
     </>
   );
