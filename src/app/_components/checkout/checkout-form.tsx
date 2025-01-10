@@ -450,15 +450,15 @@ const CheckoutForm = ({ info }: Props) => {
                 country={country}
               />
             </div>
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
-              <QuantitySelector
-                product={product}
-                info={info}
-                setProduct={setProduct}
-                couponActive={customerInfo.couponActive}
-                country={country}
-              />
-            </div>
+
+            <QuantitySelector
+              product={product}
+              info={info}
+              setProduct={setProduct}
+              couponActive={customerInfo.couponActive}
+              country={country}
+            />
+
             <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4 lg:hidden">
               <MobilePaymentOptions firePaypal={firePaypal} loading={loading} />
             </div>
