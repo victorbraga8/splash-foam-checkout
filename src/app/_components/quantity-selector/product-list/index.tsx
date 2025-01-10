@@ -16,9 +16,9 @@ export default function ProductList({
 }: any) {
   const handleClick = () => {
     if (selectedProduct === itemKey) {
-      setSelectedProduct(null); // Desmarca o item se ele já estiver selecionado
+      setSelectedProduct(null);
     } else {
-      setSelectedProduct(itemKey); // Marca o novo item
+      setSelectedProduct(itemKey);
     }
     handleProductClick(
       itemKey,
@@ -33,7 +33,7 @@ export default function ProductList({
   return (
     <div
       className={`flex w-full h-36 mb-4 border-[1px] border-[#333] rounded-md cursor-pointer hover:shadow-sm hover:shadow-blue-500 transition-all relative ${
-        selectedProduct === itemKey ? "bg-green-100" : ""
+        selectedProduct === itemKey ? "bg-lime-200" : ""
       } ${product.product === itemKey && "border-blue-500 border-[3px]"}`}
       onClick={handleClick}
     >
