@@ -465,20 +465,37 @@ const CheckoutForm = ({ info }: Props) => {
             <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
               <CustomerInfo formik={formik} />
             </div>
+            {info.template === "2" && (
+              <div className="flex flex-col w-full  lg:py-8">
+                <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
+                  <PaymentOptions
+                    info={info}
+                    product={product}
+                    formik={formik}
+                    loading={loading}
+                    firePaypal={firePaypal}
+                    country={country}
+                    setCountry={setCountry}
+                  />
+                </div>
+              </div>
+            )}
           </div>
-          <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
-              <PaymentOptions
-                info={info}
-                product={product}
-                formik={formik}
-                loading={loading}
-                firePaypal={firePaypal}
-                country={country}
-                setCountry={setCountry}
-              />
+          {info.template === "1" && (
+            <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
+              <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
+                <PaymentOptions
+                  info={info}
+                  product={product}
+                  formik={formik}
+                  loading={loading}
+                  firePaypal={firePaypal}
+                  country={country}
+                  setCountry={setCountry}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <CheckoutCouponPop
           info={info}

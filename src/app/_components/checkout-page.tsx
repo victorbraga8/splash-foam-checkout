@@ -34,6 +34,9 @@ const CheckoutPage = ({ info }: Props) => {
         <div className="flex flex-col items-center relative">
           <CheckoutHeader info={info} />
           <CheckoutForm info={info} />
+          <Footer info={info} />
+          <FunnelFluxScripts funnelFlux={info.funnelFlux} />
+          <CheckoutClickId />
         </div>
       )}
     </>
