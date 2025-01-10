@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { PriceDisplaySimple } from "../../checkout/checkout-price-display";
+import { StarIcon } from "@heroicons/react/24/solid";
 
 export default function ProductList({
-  itemKey, // Recebe a chave personalizada
+  itemKey,
   info,
   product,
   handleProductClick,
@@ -14,7 +15,7 @@ export default function ProductList({
   return (
     <>
       <div
-        className={`flex w-full mb-4 border-[1px] border-[#333] rounded-md cursor-pointer hover:shadow-sm  hover:shadow-blue-500 transition-all ${
+        className={`flex w-full h-36 mb-4 border-[1px] border-[#333] rounded-md cursor-pointer hover:shadow-sm hover:shadow-blue-500 transition-all relative ${
           product.product === itemKey && "border-blue-500 border-[3px]"
         }`}
         onClick={() => {
@@ -28,17 +29,28 @@ export default function ProductList({
           );
         }}
       >
-        <div className="flex flex-col w-1/3 sm:w-1/2 justify-center items-center">
-          {bestSeller && (
-            <div className="bg-gradient-to-b from-blue-400 to-blue-600 h-[30px]  text-white flex justify-center rounded-md px-4 left-[-40px] top-[12px] text-[12px] font-bold w-[180px] items-center">
-              Most Popular
+        {bestSeller && (
+          <div className="bg-gradient-to-b from-blue-400 to-blue-600 h-[30px] text-white flex justify-center rounded-md px-4 absolute left-[20px] top-[-15px] text-[12px] font-bold w-[180px] items-center">
+            Most Popular
+          </div>
+        )}
+
+        <div className="flex flex-col w-[80%] justify-center items-center relative">
+          <div className="flex gap-2 mt-2">
+            <input type="checkbox" />
+            <span className="font-bold">Buy {itemKey + 1}</span>
+          </div>
+          {itemKey === 2 && (
+            <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 right-2 text-[12px] font-bold items-center z-10">
+              <span className="ml-1">50% OFF</span>
             </div>
           )}
 
-          <div className="flex gap-2 mt-2">
-            <input type="checkbox" />
-            <span className="font-bold">Buy 1</span>
-          </div>
+          {itemKey === 3 && (
+            <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 right-0 text-[12px] font-bold items-center z-10">
+              <span className="ml-1">60% OFF</span>
+            </div>
+          )}
 
           <Image
             src={info.product[`image${itemKey + 1}`]}

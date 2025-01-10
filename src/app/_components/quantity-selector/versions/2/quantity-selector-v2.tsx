@@ -7,12 +7,7 @@ export default function QuantitySelectorV2({
   product,
   handleProductClick,
   country,
-  price1,
-  price2,
-  price3,
-  price4,
 }: any) {
-  console.log(info);
   const productList = {
     product1: {
       key: 0,
