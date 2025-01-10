@@ -294,7 +294,11 @@ const PaymentOptions = ({
                 />
               </div>
             </div>
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
+            <div
+              className={`bg-white p-4 rounded-lg ${
+                info.template === "1" ? "border-[1px] border-[#ddd]" : ""
+              } mt-4`}
+            >
               <CustomerInfo formik={formik} />
             </div>
           </>
@@ -408,28 +412,31 @@ const PaymentOptions = ({
             ) : null}
           </div>
         </div>
-        <div className="flex w-full space-x-4 mt-6">
-          <div className="flex w-full flex-col items-start justify-start">
-            <label className="font-bold text-[14px] pb-2">Shipping</label>
-            <div className="flex">
-              <input
-                type="radio"
-                name="shipping"
-                defaultChecked
-                value={"1"}
-                className="mr-2"
-              />
-              <label className="text-[14px]">
-                Standard{" "}
-                <PriceDisplaySimple
-                  priceUSD={parseFloat(product.productShipping)}
-                  countryCode={country}
-                  digits={2}
+        {info.template === "1" && (
+          <div className="flex w-full space-x-4 mt-6">
+            <div className="flex w-full flex-col items-start justify-start">
+              <label className="font-bold text-[14px] pb-2">Shipping</label>
+              <div className="flex">
+                <input
+                  type="radio"
+                  name="shipping"
+                  defaultChecked
+                  value={"1"}
+                  className="mr-2"
                 />
-              </label>
+                <label className="text-[14px]">
+                  Standard{" "}
+                  <PriceDisplaySimple
+                    priceUSD={parseFloat(product.productShipping)}
+                    countryCode={country}
+                    digits={2}
+                  />
+                </label>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+
         <div className="flex w-full space-x-4 mt-6">
           <div className="flex w-full flex-col items-start justify-start">
             <label className="font-bold text-[14px] pb-2">Card Number</label>
