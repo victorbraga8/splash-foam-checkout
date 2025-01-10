@@ -1,4 +1,4 @@
-import { Props } from "../checkout/checkout-header";
+import { Props } from "@/interfaces/componentVersionHandle";
 import HeaderV1 from "./versions/1/header-v1";
 import HeaderV2 from "./versions/2/header-v2";
 

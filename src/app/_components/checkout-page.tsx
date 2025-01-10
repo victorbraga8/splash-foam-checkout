@@ -33,6 +33,7 @@ const CheckoutPage = ({ info }: Props) => {
       {info.template === "2" && (
         <div className="flex flex-col items-center relative">
           <CheckoutHeader info={info} />
+          <CheckoutForm info={info} />
         </div>
       )}
     </>

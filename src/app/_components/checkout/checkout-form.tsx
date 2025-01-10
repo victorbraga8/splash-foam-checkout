@@ -438,7 +438,11 @@ const CheckoutForm = ({ info }: Props) => {
         <div id="payment-container" />
         <div className="flex w-full max-w-[1100px] sm:px-4 pb-12 flex-wrap">
           <div className="flex flex-col w-full  lg:w-1/2 px-2 lg:py-8 pt-4 sm:pt-8 pb-4">
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] flex">
+            <div
+              className={`${
+                info.template === "1" ? "bg-white" : "bg-amber-200"
+              } p-4 rounded-lg border-[1px] border-[#ddd] flex`}
+            >
               <DiscountBar
                 product={product.product}
                 info={info}

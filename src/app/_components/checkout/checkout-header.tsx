@@ -1,13 +1,8 @@
 import React from "react";
-import { CheckoutPageType } from "@/interfaces/checkoutPage";
 import { siteProduct } from "@/lib/site-info";
-
 import Header from "../header";
+import { Props } from "@/interfaces/componentVersionHandle";
 
-export type Props = {
-  info: CheckoutPageType;
-  siteProduct?: string | any;
-};
 const CheckoutHeader = ({ info }: Props) => {
   return <Header info={info} siteProduct={siteProduct} />;
 };
