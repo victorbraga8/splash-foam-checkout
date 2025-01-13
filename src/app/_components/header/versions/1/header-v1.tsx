@@ -1,4 +1,4 @@
-import { Props } from "@/app/_components/checkout/checkout-header";
+import { Props } from "@/interfaces/componentVersionHandle";
 import Image from "next/image";
 
 export default function HeaderV1({ info, siteProduct }: Props) {
