@@ -21,6 +21,7 @@ import { sendGAEvent } from "@next/third-parties/google";
 import { createJimmyKey } from "@/app/_utils/jimmyKeyUtils";
 import { emergencyStartSession } from "@/app/_utils/emergencySessionStart";
 import { useTracking } from "@/app/_context/TrackingContext";
+import WhyChoose from "../sidebar-checkout/why-choose";
 
 type Props = {
   info: CheckoutPageType;
@@ -484,6 +485,13 @@ const CheckoutForm = ({ info }: Props) => {
               </div>
             )}
           </div>
+          {info.template === "2" && (
+            <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
+              <div className=" p-4  ">
+                <WhyChoose />
+              </div>
+            </div>
+          )}
           {info.template === "1" && (
             <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
               <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">

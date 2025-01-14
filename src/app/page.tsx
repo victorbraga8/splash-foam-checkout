@@ -6,6 +6,7 @@ import { getCheckoutBySlug } from "@/app/_utils/api";
 // import { baseCheckout } from "@/lib/site-info";
 
 const baseCheckout = "splash-foam-checkout-2";
+// const baseCheckout = "splash-foam-checkout";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
