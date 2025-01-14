@@ -13,7 +13,7 @@ export default function WhyChoose() {
             <hr className="flex-grow border-t border-gray-300" />
           </div>
         </div>
-        <div className="mt-8 flex gap-4">
+        <div className="mt-10 flex gap-4">
           <Image
             src="/images/splash-foam/satisfaction-guarantee.webp"
             alt="splash-foam"

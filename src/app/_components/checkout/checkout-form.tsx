@@ -22,6 +22,8 @@ import { createJimmyKey } from "@/app/_utils/jimmyKeyUtils";
 import { emergencyStartSession } from "@/app/_utils/emergencySessionStart";
 import { useTracking } from "@/app/_context/TrackingContext";
 import WhyChoose from "../sidebar-checkout/why-choose";
+import CustomerReview from "../sidebar-checkout/customer-review";
+import OrderSumary from "../sidebar-checkout/order-summary";
 
 type Props = {
   info: CheckoutPageType;
@@ -487,8 +489,14 @@ const CheckoutForm = ({ info }: Props) => {
           </div>
           {info.template === "2" && (
             <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
+              {/* <div className=" p-4  ">
+                <OrderSumary />
+              </div> */}
               <div className=" p-4  ">
                 <WhyChoose />
+              </div>
+              <div className=" p-4  ">
+                <CustomerReview />
               </div>
             </div>
           )}
