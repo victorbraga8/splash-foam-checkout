@@ -4,8 +4,14 @@ export default function WhyChoose() {
   return (
     <>
       <div>
-        <div className="flex col items-center justify-center">
-          <h1 className="text-xl font-bold">Why Choose Oricle 2.0</h1>
+        <div className="flex flex-col items-center justify-center relative">
+          <div className="flex items-center w-full">
+            <hr className="flex-grow border-t border-gray-300" />
+            <h1 className="text-xl font-bold mx-4 whitespace-nowrap">
+              Why Choose Oricle 2.0
+            </h1>
+            <hr className="flex-grow border-t border-gray-300" />
+          </div>
         </div>
         <div className="mt-8 flex gap-4">
           <Image
@@ -23,6 +29,7 @@ export default function WhyChoose() {
           </div>
         </div>
       </div>
+
       <div>
         <div className="mt-10 flex gap-4">
           <Image
