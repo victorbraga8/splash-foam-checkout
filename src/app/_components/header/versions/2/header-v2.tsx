@@ -13,7 +13,7 @@ export default function HeaderV2({ info, siteProduct }: Props) {
                 alt={info.blurbs.text1}
                 width={140}
                 height={140}
-                className="max-w-[140px] sm:max-w-none mr-4"
+                className="max-w-[140px] sm:max-w-none ml-4"
               />
               {info.blurbs.text1}
             </div>

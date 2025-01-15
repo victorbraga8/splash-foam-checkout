@@ -79,7 +79,7 @@ const DiscountBar = ({
             </>
           )) || <>Has Been Applied </>}{" "}
         </p>
-        <p className="text-[14px] font-bold">
+        <p className="text-[12px] md:text-[14px] font-bold">
           {siteProduct} is available at the price of{" "}
           <span className="line-through">
             <PriceDisplaySimple
