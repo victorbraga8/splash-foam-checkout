@@ -53,13 +53,13 @@ export default function ProductList({
           <span className="font-bold">Buy {itemKey + 1}</span>
         </div>
         {itemKey === 2 && (
-          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 right-2 text-[12px] font-bold items-center z-10">
+          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 md:right-2 left-28 text-[12px] font-bold items-center z-10">
             <span className="ml-1">50% OFF</span>
           </div>
         )}
 
         {itemKey === 3 && (
-          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 right-2 text-[12px] font-bold items-center z-10">
+          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 md:right-2 left-28 text-[12px] font-bold items-center z-10">
             <span className="ml-1">60% OFF</span>
           </div>
         )}
