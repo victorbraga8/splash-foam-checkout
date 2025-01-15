@@ -41,7 +41,7 @@ export default function CustomerReview() {
             width={50}
             src="/images/splash-foam/rev_img1.jpg"
             alt="Linda"
-            className="absolute top-4 right-4 w-12 h-12 rounded-full"
+            className="mt-[60px] md:mt-0 absolute top-4 right-4 w-12 h-12 rounded-full"
           />
         </div>
 
@@ -70,7 +70,7 @@ export default function CustomerReview() {
             width={50}
             src="/images/splash-foam/rev_img2.jpg"
             alt="Ron"
-            className="absolute top-4 right-4 w-12 h-12 rounded-full"
+            className="mt-[35px] md:mt-0 absolute top-4 right-4 w-12 h-12 rounded-full"
           />
         </div>
         <div className=" rounded-lg p-6 shadow-sm relative border-2 border-black ">
@@ -93,12 +93,13 @@ export default function CustomerReview() {
               ✔ Verified Customer
             </span>
           </div>
+
           <Image
             height={50}
             width={50}
-            src="/images/splash-foam/rev_img2.jpg"
+            src="/images/splash-foam/cust-rev-img8.jpg"
             alt="Ron"
-            className="absolute top-4 right-4 w-12 h-12 rounded-full"
+            className="mt-[35px] md:mt-0 absolute top-4 right-4 w-12 h-12 rounded-full"
           />
         </div>
       </div>
