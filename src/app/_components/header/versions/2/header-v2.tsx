@@ -18,6 +18,7 @@ export default function HeaderV2({ info, siteProduct }: Props) {
               {info.blurbs.text1}
             </div>
             <div className="flex w-1/2 lg:w-1/3 p-2 sm:p-4 justify-center items-center font-bold text-white">
+              {info.blurbs.text2}
               <Image
                 src={info.header.badge}
                 alt={info.blurbs.text2}
@@ -25,7 +26,6 @@ export default function HeaderV2({ info, siteProduct }: Props) {
                 height={80}
                 className="max-w-[80px] sm:max-w-none mr-4"
               />
-              {info.blurbs.text2}
             </div>
           </div>
         </div>
