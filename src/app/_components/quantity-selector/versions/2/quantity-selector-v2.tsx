@@ -58,16 +58,19 @@ export default function QuantitySelectorV2({
         </div>
       </div>
       <div className="bg-red-200 py-2 mb-6 rounded-md">
-        <div className="flex flex-col pl-20 text-sm justify-between">
+        <div className="flex flex-col sm:flex-row text-sm justify-between sm:justify-center items-center gap-1 sm:gap-0">
           <span className="font-bold flex items-center gap-1">
             <span className="text-red-600 flex items-center">
               <FireIcon className="w-6 h-6 text-red-600" />
               High Demand:
             </span>
+          </span>
+          <span className="text-black sm:ml-2 font-bold">
             84 people are looking at this offer!
           </span>
         </div>
       </div>
+
       <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd]">
         {productKeys.map((key: any) => {
           const product = productList[key];
