@@ -51,10 +51,12 @@ export default function QuantitySelectorV2({
   return (
     <>
       <div className="flex justify-between py-6 items-center">
-        <CubeIcon className="h-20 w-20 mr-2" />
+        <CubeIcon className="lg:h-20 lg:w-20 w-16 h-16 mr-2" />
         <div className="flex w-full flex-col justify-start items-start">
-          <h3 className="font-bold text-3xl">Select Quantity</h3>
-          <h6>How many hearing aids do you want?</h6>
+          <h3 className="font-bold lg:text-3xl text-2xl">Select Quantity</h3>
+          <h6 className="text-[14px] lg:text-lg">
+            How many hearing aids do you want?
+          </h6>
         </div>
       </div>
       <div className="bg-red-200 py-2 mb-6 rounded-md">
