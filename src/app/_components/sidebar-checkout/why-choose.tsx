@@ -7,20 +7,21 @@ export default function WhyChoose() {
         <div className="flex flex-col items-center justify-center relative">
           <div className="flex items-center w-full">
             <hr className="flex-grow border-t border-gray-300" />
-            <h1 className="text-xl font-bold mx-4 whitespace-nowrap">
+            <h1 className="text-xl font-bold mx-4 text-center whitespace-nowrap">
               Why Choose Oricle 2.0
             </h1>
             <hr className="flex-grow border-t border-gray-300" />
           </div>
         </div>
-        <div className="mt-10 flex gap-4">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center sm:items-start">
           <Image
             src="/images/splash-foam/satisfaction-guarantee.webp"
             alt="splash-foam"
             height={100}
             width={100}
+            className="w-24 h-24 sm:w-auto sm:h-auto"
           />
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col text-center sm:text-left justify-center">
             <h2 className="font-bold text-xl">Satisfaction Guarantee</h2>
             <p>
               We stand by our product 100%. Return your Oricle 2.0 within 45
@@ -31,14 +32,15 @@ export default function WhyChoose() {
       </div>
 
       <div>
-        <div className="mt-10 flex gap-4">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center sm:items-start">
           <Image
             src="/images/splash-foam/choose-seal2.png"
             alt="splash-foam"
             height={100}
             width={100}
+            className="w-24 h-24 sm:w-auto sm:h-auto"
           />
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col text-center sm:text-left justify-center">
             <h2 className="font-bold text-xl">Fast U.S. Shipping</h2>
             <p>
               Your Oricle hearing aid 2.0 will be delivered within 3-6 business
@@ -47,16 +49,18 @@ export default function WhyChoose() {
           </div>
         </div>
       </div>
+
       <div>
-        <div className="mt-10 flex gap-4">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center sm:items-start">
           <Image
             src="/images/splash-foam/choose-seal3.png"
             alt="splash-foam"
             height={100}
             width={100}
           />
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col text-center sm:text-left justify-center">
             <h2 className="font-bold text-xl">
+              {" "}
               +16,000 Orders Shipped Till Date
             </h2>
             <p>

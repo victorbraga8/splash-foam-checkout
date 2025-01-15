@@ -473,7 +473,7 @@ const CheckoutForm = ({ info }: Props) => {
 
             {info.template === "2" && (
               <div className="flex flex-col w-full  lg:py-8">
-                <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
+                <div className="bg-white mt-4 md:mt-0 p-4 rounded-lg border-[1px] border-[#ddd] ">
                   <PaymentOptions
                     info={info}
                     product={product}
