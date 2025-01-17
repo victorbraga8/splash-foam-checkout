@@ -489,9 +489,6 @@ const CheckoutForm = ({ info }: Props) => {
           </div>
           {info.template === "2" && (
             <div className="flex flex-col w-full lg:w-1/2 px-2 lg:py-8">
-              {/* <div className=" p-4  ">
-                <OrderSumary />
-              </div> */}
               <div className="p-4">
                 <WhyChoose />
               </div>

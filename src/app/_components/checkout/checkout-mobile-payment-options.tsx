@@ -1,6 +1,7 @@
 import React from "react";
 import { GlobeAmericasIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import { info } from "console";
 
 type Props = {
   firePaypal: () => void;

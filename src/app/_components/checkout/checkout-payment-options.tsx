@@ -202,7 +202,7 @@ const PaymentOptions = ({
         </div>
       ) : (
         <>
-          <div className="flex items-center justify-center">
+          <div className="md:flex items-center justify-center hidden">
             <h1>Express Checkout</h1>
           </div>
         </>
@@ -278,7 +278,7 @@ const PaymentOptions = ({
           <>
             <div className="hidden lg:flex w-full justify-start mt-2 mb-4">
               <div
-                className="flex w-full justify-center border border-amber-400 bg-amber-400 rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-amber-300 hover:border-amber-500"
+                className="flex w-full justify-center border border-amber-400 bg-amber-400 rounded-md  px-4 py-2 h-11 cursor-pointer overflow-hidden space-x-2 hover:bg-amber-300 hover:border-amber-500"
                 onClick={() => {
                   if (loading === "") {
                     firePaypal();
@@ -296,7 +296,7 @@ const PaymentOptions = ({
             </div>
             <div
               className={`bg-white p-4 rounded-lg ${
-                info.template === "1" ? "border-[1px] border-[#ddd]" : ""
+                info.template === "1" ? "border border-gray-300" : ""
               } mt-4`}
             >
               <CustomerInfo formik={formik} />
@@ -304,7 +304,7 @@ const PaymentOptions = ({
           </>
         )}
 
-        <div className="hidden lg:block h-[1px] w-full bg-[#ddd] mt-2 mb-4" />
+        <div className="hidden lg:block h-[1px] w-full bg-gray-300 mt-2 mb-4" />
         <div className="flex w-full justify-start items-center">
           <LockClosedIcon className="h-[16px] w-[16px] mr-2" />
           <h3 className="font-bold text-[16px]">Step 4: Delivery Address</h3>
