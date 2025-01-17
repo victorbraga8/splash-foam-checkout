@@ -33,8 +33,8 @@ export default function ProductList({
   return (
     <div
       className={`flex w-full h-36 mb-4 border-[1px] border-[#333] rounded-md cursor-pointer hover:shadow-sm hover:shadow-blue-500 transition-all relative ${
-        selectedProduct === itemKey ? "bg-lime-200" : ""
-      } ${product.product === itemKey && "border-blue-500 border-[3px]"}`}
+        selectedProduct === itemKey ? "bg-yellow-100" : ""
+      } ${product.product === itemKey && "border-blue-500 border-[2px]"}`}
       onClick={handleClick}
     >
       {bestSeller && (
@@ -43,8 +43,8 @@ export default function ProductList({
         </div>
       )}
 
-      <div className="flex flex-col w-4/5 justify-center items-center relative">
-        <div className="flex gap-2 mt-2">
+      <div className="flex flex-col w-4/5 justify-center items-start pl-2 relative">
+        <div className="flex gap-2 mt-2 pl-3">
           <input
             type="checkbox"
             checked={selectedProduct === itemKey}
@@ -53,13 +53,13 @@ export default function ProductList({
           <span className="font-bold">Buy {itemKey + 1}</span>
         </div>
         {itemKey === 2 && (
-          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-12 h-12 absolute top-2 left-28 lg:left-36 text-xs font-bold items-center z-10">
+          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-12 h-12 absolute top-2 left-28 lg:left-24 text-xs font-bold items-center z-10">
             <span className="ml-1">50% OFF</span>
           </div>
         )}
 
         {itemKey === 3 && (
-          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-12 h-12 absolute top-2 left-28 lg:left-36 text-xs font-bold items-center z-10">
+          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-12 h-12 absolute top-2 left-28 lg:left-24 text-xs font-bold items-center z-10">
             <span className="ml-1">60% OFF</span>
           </div>
         )}
@@ -72,7 +72,7 @@ export default function ProductList({
         />
       </div>
 
-      <div className="flex flex-col items-end pr-8 my-auto w-full space-y-2">
+      <div className="flex flex-col items-end pr-8 my-auto w-full space-y-2 ">
         <p className="text-base text-gray-400 line-through font-bold decoration-red-500">
           <PriceDisplaySimple
             priceUSD={Number(parseFloat(ogPrice))}
@@ -84,17 +84,21 @@ export default function ProductList({
           className="text-base text-black font-bold"
           id={`price${itemKey + 1}`}
         >
-          <PriceDisplaySimple
-            priceUSD={Number(price)}
-            countryCode={country}
-            digits={2}
-          />
+          <div className="text-2xl">
+            <PriceDisplaySimple
+              priceUSD={Number(price)}
+              countryCode={country}
+              digits={2}
+            />
+          </div>
         </p>
         <p
           className="text-xs text-green-500 font-bold"
           id={`price${itemKey + 1}`}
         >
-          <span>You Save {Number(ogPrice) - Number(price)}</span>
+          <span className="text-lg">
+            You Save {Number(ogPrice) - Number(price)}
+          </span>
         </p>
       </div>
     </div>
