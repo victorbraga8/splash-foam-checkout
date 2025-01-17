@@ -488,21 +488,21 @@ const CheckoutForm = ({ info }: Props) => {
             )}
           </div>
           {info.template === "2" && (
-            <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
+            <div className="flex flex-col w-full lg:w-1/2 px-2 lg:py-8">
               {/* <div className=" p-4  ">
                 <OrderSumary />
               </div> */}
-              <div className=" p-4  ">
+              <div className="p-4">
                 <WhyChoose />
               </div>
-              <div className=" p-4  ">
+              <div className="p-4">
                 <CustomerReview />
               </div>
             </div>
           )}
           {info.template === "1" && (
             <div className="flex flex-col  w-full  lg:w-1/2 px-2 lg:py-8">
-              <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] ">
+              <div className="bg-white p-4 rounded-lg border border-gray-300 ">
                 <PaymentOptions
                   info={info}
                   product={product}
