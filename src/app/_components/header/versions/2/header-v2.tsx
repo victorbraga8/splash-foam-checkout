@@ -4,30 +4,26 @@ import Image from "next/image";
 export default function HeaderV2({ info, siteProduct }: Props) {
   return (
     <>
-      <div className="flex w-full relative flex-col items-center">
-        <div className="flex w-full justify-center bg-white shadow-lg">
-          <div className="flex w-full max-w-[1100px] justify-between items-center px-4 text-[12px] sm:text-[16px]">
-            <div className="flex w-1/2 lg:w-1/3 p-2 sm:p-4 justify-center items-center font-bold text-white">
-              <Image
-                src={info.header.logo}
-                alt={info.blurbs.text1}
-                width={140}
-                height={140}
-                className="max-w-[140px] sm:max-w-none ml-4"
-              />
-              {info.blurbs.text1}
-            </div>
-            <div className="flex w-1/2 lg:w-1/3 p-2 sm:p-4 justify-center items-center font-bold text-white">
-              {info.blurbs.text2}
-              <Image
-                src={info.header.badge}
-                alt={info.blurbs.text2}
-                width={80}
-                height={80}
-                className="max-w-[80px] sm:max-w-none mr-4"
-              />
-            </div>
-          </div>
+      <div className="flex w-full justify-between bg-white shadow-lg items-center pb-1 pt-4 md:px-28">
+        <div className="text-xs flex flex-col justify-center items-center sm:text-base">
+          <Image
+            width={140}
+            height={140}
+            src={info.header.logo}
+            alt={info.blurbs.text1}
+            className="w-36 max-w-36 sm:max-w-none md:ml-0 ml-1"
+          />
+          <div className="hidden md:block text-white">{info.blurbs.text1}</div>
+        </div>
+        <div className="text-xs flex flex-col justify-center items-center sm:text-base">
+          <Image
+            width={80}
+            height={80}
+            src={info.header.badge}
+            alt={info.blurbs.text2}
+            className="w-20 h-20 max-w-20 sm:max-w-none mr-2"
+          />
+          <div className="hidden md:block text-white">{info.blurbs.text2}</div>
         </div>
       </div>
     </>
