@@ -437,14 +437,14 @@ const CheckoutForm = ({ info }: Props) => {
         setCustomerInfo={setCustomerInfo}
         product={product}
       />
-      <div className="flex  w-full relative flex-col items-center bg-[#f1f4f8]">
+      <div className="flex  w-full relative flex-col items-center bg-gray-100">
         <div id="payment-container" />
         <div className="flex w-full max-w-[1100px] sm:px-4 pb-12 flex-wrap">
           <div className="flex flex-col w-full  lg:w-1/2 px-2 lg:py-8 pt-4 sm:pt-8 pb-4">
             <div
               className={`${
                 info.template === "1" ? "bg-white" : "bg-amber-200"
-              } p-4 rounded-lg border-[1px] border-[#ddd] flex`}
+              } p-4 rounded-lg border border-gray-300  flex`}
             >
               <DiscountBar
                 product={product.product}
@@ -462,18 +462,18 @@ const CheckoutForm = ({ info }: Props) => {
               country={country}
             />
 
-            <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4 lg:hidden">
+            <div className="bg-white p-4 rounded-lg border border-gray-30 mt-4 lg:hidden">
               <MobilePaymentOptions firePaypal={firePaypal} loading={loading} />
             </div>
             {info.template === "1" && (
-              <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd] mt-4">
+              <div className="bg-white p-4 rounded-lg border border-gray-30 mt-4">
                 <CustomerInfo formik={formik} />
               </div>
             )}
 
             {info.template === "2" && (
-              <div className="flex flex-col w-full  lg:py-8">
-                <div className="bg-white mt-4 md:mt-0 p-4 rounded-lg border-[1px] border-gray-300 ">
+              <div className="flex flex-col w-full lg:py-8">
+                <div className="bg-white mt-4 md:mt-0 p-4 rounded-lg border border-gray-300 ">
                   <PaymentOptions
                     info={info}
                     product={product}

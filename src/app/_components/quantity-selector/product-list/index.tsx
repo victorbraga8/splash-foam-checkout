@@ -43,7 +43,7 @@ export default function ProductList({
         </div>
       )}
 
-      <div className="flex flex-col w-[80%] justify-center items-center relative">
+      <div className="flex flex-col w-4/5 justify-center items-center relative">
         <div className="flex gap-2 mt-2">
           <input
             type="checkbox"
@@ -53,13 +53,13 @@ export default function ProductList({
           <span className="font-bold">Buy {itemKey + 1}</span>
         </div>
         {itemKey === 2 && (
-          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 left-[7rem] lg:left-36 text-[12px] font-bold items-center z-10">
+          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-12 h-12 absolute top-2 left-28 lg:left-36 text-xs font-bold items-center z-10">
             <span className="ml-1">50% OFF</span>
           </div>
         )}
 
         {itemKey === 3 && (
-          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-[50px] h-[50px] absolute top-2 left-[7rem] lg:left-36 text-[12px] font-bold items-center z-10">
+          <div className="bg-red-500 text-white flex justify-center p-2 rounded-full w-12 h-12 absolute top-2 left-28 lg:left-36 text-xs font-bold items-center z-10">
             <span className="ml-1">60% OFF</span>
           </div>
         )}
@@ -72,17 +72,16 @@ export default function ProductList({
         />
       </div>
 
-      <div className="flex sm:flex-col items-end align-center pr-8 my-auto w-full space-x-2 sm:space-x-0">
-        <p className="text-[16px] text-[#c1c2c3] line-through font-bold decoration-red-500">
+      <div className="flex flex-col items-end pr-8 my-auto w-full space-y-2">
+        <p className="text-base text-gray-400 line-through font-bold decoration-red-500">
           <PriceDisplaySimple
             priceUSD={Number(parseFloat(ogPrice))}
             countryCode={country}
             digits={0}
           />
         </p>
-
         <p
-          className="text-[16px] text-black font-bold"
+          className="text-base text-black font-bold"
           id={`price${itemKey + 1}`}
         >
           <PriceDisplaySimple
@@ -92,7 +91,7 @@ export default function ProductList({
           />
         </p>
         <p
-          className="text-xs text-[#5acd65] font-bold"
+          className="text-xs text-green-500 font-bold"
           id={`price${itemKey + 1}`}
         >
           <span>You Save {Number(ogPrice) - Number(price)}</span>

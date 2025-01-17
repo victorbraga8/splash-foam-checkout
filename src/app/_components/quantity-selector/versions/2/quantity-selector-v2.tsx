@@ -54,7 +54,7 @@ export default function QuantitySelectorV2({
         <CubeIcon className="lg:h-20 lg:w-20 w-16 h-16 mr-2" />
         <div className="flex w-full flex-col justify-start items-start">
           <h3 className="font-bold lg:text-3xl text-2xl">Select Quantity</h3>
-          <h6 className="text-[14px] lg:text-lg">
+          <h6 className="text-sm lg:text-lg">
             How many hearing aids do you want?
           </h6>
         </div>
@@ -73,7 +73,7 @@ export default function QuantitySelectorV2({
         </div>
       </div>
 
-      <div className="bg-white p-4 rounded-lg border-[1px] border-[#ddd]">
+      <div className="bg-white p-4 rounded-lg border-[1px] border-gray-300">
         {productKeys.map((key: any) => {
           const product = productList[key];
           return (

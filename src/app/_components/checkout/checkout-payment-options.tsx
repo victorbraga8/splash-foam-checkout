@@ -278,7 +278,7 @@ const PaymentOptions = ({
           <>
             <div className="hidden lg:flex w-full justify-start mt-2 mb-4">
               <div
-                className="flex w-full justify-center border-[1px] border-[#ffc439] bg-[#ffc439] rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-[#ffde3a] hover:border-[#ffde3a]"
+                className="flex w-full justify-center border border-amber-400 bg-amber-400 rounded-md  px-4 py-2 h-[44px] cursor-pointer overflow-hidden space-x-2 hover:bg-amber-300 hover:border-amber-500"
                 onClick={() => {
                   if (loading === "") {
                     firePaypal();
