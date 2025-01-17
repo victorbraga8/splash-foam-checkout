@@ -73,7 +73,7 @@ export default function QuantitySelectorV2({
         </div>
       </div>
 
-      <div className="bg-white p-4 rounded-lg border-[1px] border-gray-300">
+      <div className="bg-white p-4 rounded-lg border border-gray-300">
         {productKeys.map((key: any) => {
           const product = productList[key];
           return (

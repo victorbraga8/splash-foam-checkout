@@ -38,7 +38,7 @@ export default function ProductList({
       onClick={handleClick}
     >
       {bestSeller && (
-        <div className="bg-gradient-to-b from-blue-400 to-blue-600 h-[30px] text-white flex justify-center rounded-md px-4 absolute left-[20px] top-[-15px] text-[12px] font-bold w-[180px] items-center">
+        <div className="bg-gradient-to-b from-blue-400 to-blue-600 h-8 text-white flex justify-center rounded-md px-4 absolute left-5 -top-3 text-sm font-bold w-44 items-center">
           Most Popular
         </div>
       )}
